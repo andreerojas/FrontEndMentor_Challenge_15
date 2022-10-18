@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+    font-size: 18px;
+}
+
+main {
+    background-color: rgb(253, 247, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: minmax(0, 4fr) minmax(0, 6fr);
+
+}
+
+
+.info-container {
+    background: url("images/pattern-bg.png");
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 30% 30% 40%;
+    position: relative;
+    padding: 0 1em;
+}
+
+h1 {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.map-container {
+    background-color: red;
+}
+
+.result-container {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em 0;
+    align-self: start;
+    position: absolute;
+    width: 90%;
+    height: 12em;
+    bottom: -6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-block {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.result-descriptor {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 59%);
+    font-size: 0.5em;
+}
+
+.result {
+    color: hsl(0, 0%, 17%);
+}
+
+form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+}
+
+input{
+    padding: 1em;
+    border: none;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+button{
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+    width: 3em;
+    height: 3em;
+    background-color: hsl(0, 0%, 17%);
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+button img{
+    width: 0.75em;
+    height: 0.75em;
+}
+
+@media(min-width:376px) {
+    form{
+        width:95%;
+    }
+}
+
+@media(min-width:576px){
+    form{
+        width:90%;
+    }   
+    section {
+        width: 90%;
+        height: 75%;
+    }
+
+    .result-container {
+        flex-direction: row;
+        height: 4em;
+        bottom: -2em;
+    }
+    .result-block{
+        border-left: 1px solid hsl(0, 0%, 59%);
+        padding: 0 1em;
+        width: 25%;
+    }
+    .result-block:nth-of-type(1){
+        border-left: none;
+    }
+}
+
+@media(min-width:768px){
+    form{
+        width:80%;
+    }   
+}
+
+@media(min-width:992px){
+    form{
+        width:70%;
+    }   
+}
+
+@media(min-width:1200px){
+    form{
+        width:60%;
+    }   
+}
+
+@media(min-width:1400px){
+    form{
+        width:50%;
+    }   
+}
