@@ -95,6 +95,7 @@ input{
     border: none;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
+    outline: none;
 }
 
 button{
@@ -108,6 +109,9 @@ button{
     border-bottom-right-radius: 1em;
 }
 
+input:hover, button:hover{
+    cursor: grab;
+}
 button img{
     width: 0.75em;
     height: 0.75em;
