@@ -49,7 +49,12 @@ function search() {
     }
 }
 
-
+let map = L.map('map',{'zoomControl':false}).setView([auxData.location.lat,auxData.location.lng],15);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+let marker = L.marker([auxData.location.lat,auxData.location.lng]).addTo(map);
 
 form.addEventListener('submit', search);
 search();

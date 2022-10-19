@@ -57,12 +57,11 @@ h1 {
     align-self: start;
     position: absolute;
     width: 90%;
-    height: 12em;
     bottom: -6em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    z-index: 2;
 }
 
 .result-block {
@@ -77,6 +76,7 @@ h1 {
     text-transform: uppercase;
     color: hsl(0, 0%, 59%);
     font-size: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 .result {
@@ -113,6 +113,9 @@ button img{
     height: 0.75em;
 }
 
+#map{
+    z-index: 0;
+}
 @media(min-width:376px) {
     form{
         width:95%;
@@ -130,7 +133,6 @@ button img{
 
     .result-container {
         flex-direction: row;
-        height: 4em;
         bottom: -2em;
     }
     .result-block{
